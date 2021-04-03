@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {  UserServiceService} from "../user-service.service";
-import { User } from "./user";
 
 @Component({
   selector: 'app-users',
@@ -8,7 +7,7 @@ import { User } from "./user";
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  user:User[];
+  user:[];
   constructor(public myService: UserServiceService) { 
 
   }

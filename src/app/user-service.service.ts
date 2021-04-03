@@ -1,12 +1,11 @@
-import { Injectable } from '@angular/core';
-import {User} from '';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
-  foundUser: User[] = [];
+  foundUser: [] = [];
 
   constructor(private http: HttpClient) { 
   }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {UsersComponent} from './users/users.component';
+import { UsersComponent } from "./users/users.component";
 import { RepositoriesComponent } from "./repositories/repositories.component";
 import { NotfoundComponent } from "./notfound/notfound.component";
 
