@@ -9,6 +9,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { UsersComponent } from './users/users.component';
+import {  HttpClientModule} from "@angular/common/http";
+import { UserServiceService } from "./user-service.service";
 
 @NgModule({
   declarations: [
@@ -22,9 +24,10 @@ import { UsersComponent } from './users/users.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
