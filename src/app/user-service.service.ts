@@ -1,19 +1,66 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { Repos } from "./repos";
+import { User } from "./user";
+import {  environment} from "src/environments/environment.prod";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserServiceService {
-  foundUser: [] = [];
+  foundUser: User;
+  allRepos:Repos;
 
   constructor(private http: HttpClient) { 
+
   }
   searchUSer(searchName: string) {
-    // tslint:disable-next-line:class-name
-    interface data {
+    interface Response {
       login: string;
+      url:string;
+      html_url:string;
+      location:string
+      public_repos:number;
+      followers:number;
+      following:number;
+      avatar_url:string;
+      created_at:Date;
     }
-
+    return new Promise((resolve, reject) => {
+      this.http.get<Response>('').toPromise().then(
+        (result) => {
+          this.foundUser = result;
+          console.log(this.foundUser);
+          resolve;
+        },
+        (error) => {
+          console.log(error);
+          reject();
+        }
+      );
+    });
+  }
+  getReopos(searchName){
+    interface Repos{
+      name:string;
+      html_url:string;
+      description:string;
+      forks:number;
+      watchers_count:number;
+      language:string;
+      created_at:Date;
+    }
+    return new Promise((resolve,reject)=>{
+      this.http.get<Repos>('').toPromise().then(
+        (results) => {
+          this.allRepos = results;
+          resolve;
+        },
+        (error) => {
+          console.log(error);
+          reject();
+        }
+      );
+    });
 }
 }
