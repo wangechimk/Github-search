@@ -12,6 +12,7 @@ import { UsersComponent } from './users/users.component';
 import {  HttpClientModule} from "@angular/common/http";
 import { UserServiceService } from "./user-service.service";
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,9 @@ import { UserServiceService } from "./user-service.service";
     NotfoundComponent,
     RepositoriesComponent,
     SearchFormComponent,
-    UsersComponent
+    UsersComponent,
+    
+    
   ],
   imports: [
     BrowserModule,
