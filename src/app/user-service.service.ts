@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { Repos } from "./repos";
 import { User } from "./user";
-import {  environment} from "src/environments/environment.prod";
+import {  environment } from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +11,12 @@ export class UserServiceService {
   foundUser: User;
   allRepos:Repos;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) {
 
   }
+
+  // HttpInterceptor
+
   searchUSer(searchName: string) {
     interface Response {
       login: string;
@@ -25,19 +28,13 @@ export class UserServiceService {
       following:number;
       avatar_url:string;
       created_at:Date;
-    }
-    return new Promise((resolve, reject) => {
-      this.http.get<Response>('').toPromise().then(
-        (result) => {
-          this.foundUser = result;
-          console.log(this.foundUser);
-          resolve;
-        },
-        (error) => {
-          console.log(error);
-          reject();
-        }
-      );
+    };
+
+    let url = `${environment.baseURI}users/${searchName}`
+    return this.http.get(url, {
+      headers: {
+        Authorization: `token ${environment.apiKey}`
+      }
     });
   }
   getReopos(searchName){
@@ -50,17 +47,11 @@ export class UserServiceService {
       language:string;
       created_at:Date;
     }
-    return new Promise((resolve,reject)=>{
-      this.http.get<Repos>('').toPromise().then(
-        (results) => {
-          this.allRepos = results;
-          resolve;
-        },
-        (error) => {
-          console.log(error);
-          reject();
-        }
-      );
+    let url = `${environment.baseURI}users/${searchName}/repos`
+    return this.http.get(url, {
+      headers: {
+        Authorization: `token ${environment.apiKey}`
+      }
     });
 }
 }

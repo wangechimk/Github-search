@@ -12,30 +12,25 @@ import { Repos } from '../repos';
 export class UsersComponent implements OnInit {
   user:User;
   repo:Repos;
-  constructor(public myService: UserServiceService ,private repoService: UserServiceService) { 
+  constructor(public myService: UserServiceService ,private repoService: UserServiceService) {
 
   }
   searchs(searchName) {
-    this.myService.searchUSer(searchName).then(
-      (success)=>{
-        this.user = this.myService.foundUser;
-      },
-      (error)=>{
-        console.log(error)
-      }
-    );
-      this.repoService.getReopos(searchName).then(
-        (results)=>{
-          this.repo =this.repoService.allRepos
-          console.log(this.repo);
-        },
-        (error)=>{
-          console.log(error);
-        }
-      );
+    this.myService.searchUSer(searchName).subscribe(res => {
+      this.user = res as User;
+      console.log('data', res);
+      this.myService.getReopos(searchName).subscribe(repos => {
+        console.log('repos', repos);
+        this.repo = repos as Repos;
+      })
+    }, error => {
+      console.log(error);
+
+    });
+
   }
-  
+
   ngOnInit(){
-    this.searchs("wangechimk");
+    // this.searchs("wangechimk");
   }
 }

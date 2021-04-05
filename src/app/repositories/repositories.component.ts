@@ -8,20 +8,15 @@ import { Repos } from '../repos';
   styleUrls: ['./repositories.component.scss']
 })
 export class RepositoriesComponent implements OnInit {
-   
+
   repo:Repos;
   constructor( public repoService : UserServiceService) { }
 
   repoSearch(searchName){
-    this.repoService.getReopos(searchName).then(
-      (results)=>{
-        this.repo =this.repoService.allRepos
-        console.log(this.repo);
-      },
-      (error)=>{
-        console.log(error);
-      }
-    );
+    this.repoService.getReopos(searchName).subscribe(res => {
+      console.log('repos', res);
+
+    });
   }
 
   ngOnInit() {
