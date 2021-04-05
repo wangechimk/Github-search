@@ -11,6 +11,7 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { UsersComponent } from './users/users.component';
 import {  HttpClientModule} from "@angular/common/http";
 import { UserServiceService } from "./user-service.service";
+import { DatePipePipe } from './date-pipe.pipe';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { UserServiceService } from "./user-service.service";
     RepositoriesComponent,
     SearchFormComponent,
     UsersComponent,
+    DatePipePipe,
     
     
   ],
