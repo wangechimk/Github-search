@@ -1,27 +1,43 @@
 # GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.15.
+## Author
+Wangechi kimani
 
-## Development server
+## Description
+This is an angular application that searches for users on Github and repositories online using github api and angular.
+## Live Page
+https://git04-search.netlify.app/
+The app is able to search for users and their repositories based on their search.
+## BDD
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+| Behavior                  | Input                     | Output                    |
+| ------------------------- | ------------------------- | ------------------------- |
+| Search for a github profile |Enter the username of the github User name | Displays the name, username, number of repositories,Joining date, followers, following and lists the repos  |
 
-## Code scaffolding
+## Setup instructions
+*open terminal
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+*git clone
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Technology Used 
+*Angular CLI
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+*HTML
 
-## Running end-to-end tests
+*SCSS
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+*Typescript
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Known Bugs
+
+*None so far
+
+## Contact Information
+For any inquiries or information email me at [wangechik.michelle@gmail.com]
+
+## License
+* *MIT License:*
+* Copyright (c) 2021 **Wangechi Kimani**
