@@ -12,6 +12,7 @@ import { UsersComponent } from './users/users.component';
 import {  HttpClientModule} from "@angular/common/http";
 import { UserServiceService } from "./user-service.service";
 import { DatePipePipe } from './date-pipe.pipe';
+import { HoverDirective } from './hover.directive';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { DatePipePipe } from './date-pipe.pipe';
     SearchFormComponent,
     UsersComponent,
     DatePipePipe,
+    HoverDirective,
     
     
   ],
