@@ -1,0 +1,278 @@
+/*|| Hero*/
+.hero {
+    margin-bottom: 8.8rem;
+    /*|| breakpoint s */
+    /*|| desktop view */
+  }
+  .hero__content-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #2d2640;
+  }
+  .hero__divider {
+    display: none;
+  }
+  .hero__content {
+    padding: 5.5rem 1.625rem 5.76rem 1.625rem;
+    text-align: center;
+    color: #fafafa;
+    position: relative;
+    z-index: 2;
+  }
+  .hero__content::before {
+    /* content: url("../src/assets/img/bg-pattern-intro-left-mobile.svg"); */
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    z-index: -1;
+  }
+  .hero__content::after {
+    /* content: url("..src/assets/img/bg-pattern-intro-right-mobile.svg"); */
+    position: absolute;
+    right: 0;
+    top: 21.5rem;
+  }
+  .hero__heading {
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.09rem;
+  }
+  .hero__text {
+    margin-top: 0.8rem;
+    line-height: 1.65rem;
+    margin-bottom: 2rem;
+  }
+  .hero__btn {
+    border: 2px solid #fafafa;
+    display: inline-block;
+    color: whitesmoke;
+  }
+  .hero__btn:hover {
+    background-color: #fafafa;
+    color: #2b272f;
+  }
+  .hero__image {
+    object-fit: cover;
+    width: 100%;
+    height: 28rem;
+  }
+  @media only screen and (min-width: 43em) {
+    .hero {
+      margin-bottom: 18.8rem;
+      /*|| breakpoint m */
+    }
+    .hero__btn:hover {
+      animation: shake 2s ease-in-out 0.5s both;
+      visibility: visible;
+    }
+  }
+  @media only screen and (min-width: 43em) and (min-width: 62em) {
+    .hero {
+      position: relative;
+    }
+    .hero__content-wrapper {
+      flex-direction: row;
+      align-items: center;
+      padding: 1.9rem 10rem;
+    }
+    .hero__content-wrapper::before {
+      /* content: url("..src/assets/img/bg-pattern-intro-left-desktop.svg"); */
+      position: absolute;
+      top: 26.8rem;
+      left: 0;
+    }
+    .hero__content-wrapper::after {
+      /* content: url("..src/assets/img/bg-pattern-intro-right-desktop.svg"); */
+      position: absolute;
+      top: -4.7rem;
+      right: 0;
+    }
+    .hero__content {
+      text-align: left;
+      flex: 1.1;
+    }
+    .hero__content::after,
+    .hero__content::before {
+      content: unset;
+    }
+    .hero__divider {
+      display: block;
+      margin-bottom: 4rem;
+    }
+  }
+  @media only screen and (min-width: 43em) {
+    .hero__image-wrapper {
+      flex: 1;
+    }
+  }
+  @media only screen and (min-width: 82em) {
+    .hero__content-wrapper {
+      padding: 6.7rem 10.4rem 7.9rem 10.4rem;
+      position: relative;
+      align-items: unset;
+    }
+    .hero__content {
+      padding: 0;
+      margin: 0 2rem 0 0;
+      max-width: 33.375rem;
+      text-align: left;
+    }
+    .hero__heading {
+      font-size: 4.22rem;
+      line-height: 4rem;
+      margin-bottom: 1.6rem;
+    }
+    .hero__text {
+      margin-bottom: 2.1rem;
+    }
+    .hero__image-wrapper {
+      object-fit: cover;
+    }
+    .hero__image {
+      max-width: 34rem;
+      object-fit: cover;
+      height: 40rem;
+      position: absolute;
+    }
+  }
+  
+  /*|| Features*/
+  .features {
+    text-align: center;
+    padding: 0 1.6rem;
+    margin-bottom: 8.9rem;
+    /* breakpoint s */
+    /* breakpoint m */
+  }
+  .features__divider {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .features__heading {
+    font-size: 2.9rem;
+    margin-bottom: 4.4rem;
+  }
+  .features__feature {
+    max-width: 20.625rem;
+    margin: 0 auto;
+  }
+  .features__feature:not(:last-child) {
+    margin-bottom: 3.6rem;
+  }
+  @media only screen and (min-width: 43em) {
+    .features {
+      margin-bottom: 10.3rem;
+      padding: 0 1rem;
+    }
+    .features__heading {
+      text-align: left;
+    }
+    .features__divider {
+      margin: 0 0 2rem 0;
+    }
+    .features__content-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .features__feature:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 1rem;
+    }
+  }
+  @media only screen and (min-width: 62em) {
+    .features {
+      text-align: left;
+      padding: 0 10rem;
+    }
+    .features__divider {
+      margin-bottom: 3rem;
+    }
+    .features__heading {
+      font-size: 4.4rem;
+      margin-bottom: 4.7rem;
+    }
+    .features__feature:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+  
+  /*|| Cta */
+  .cta {
+    margin: 0 1.55rem 8.7rem 1.55rem;
+    background-color: #2d2640;
+    color: #fafafa;
+    text-align: center;
+    position: relative;
+    overflow-y: hidden;
+    /* breakpoint s*/
+    /* breakpoint m*/
+    /* breakpoint l*/
+  }
+  .cta__content-wrapper {
+    padding: 4.4rem 2em 5.2rem 2rem;
+  }
+  .cta__content-wrapper::after {
+    /* content: url("..src/assets/img/bg-pattern-how-we-work-mobile.svg"); */
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .cta__heading {
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+    margin-bottom: 2.8rem;
+    position: relative;
+    z-index: 2;
+  }
+  .cta__btn {
+    background-color: #2d2640;
+    border: 2px solid #fafafa;
+    position: relative;
+    z-index: 2;
+    color: whitesmoke;
+  }
+  .cta__btn:hover {
+    background-color: #fafafa;
+    color: #2d2640;
+  }
+  @media only screen and (min-width: 43em) {
+    .cta__content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    /* .cta__content-wrapper::after {
+      content: url("..src/assets/img/bg-pattern-how-we-work-desktop.svg");
+    } */
+    .cta__heading {
+      margin-bottom: 0;
+      text-align: left;
+      max-width: 22rem;
+    }
+    .cta__btn {
+      align-self: center;
+      max-width: 13rem;
+    }
+  }
+  @media only screen and (min-width: 62em) {
+    .cta {
+      margin: 0 10.4rem;
+      margin-bottom: 9.2rem;
+    }
+    .cta__content-wrapper {
+      padding: 4.6rem 5rem;
+    }
+    .cta__heading {
+      max-width: 25rem;
+      font-size: 2.6rem;
+      line-height: 3.2rem;
+    }
+  }
+  @media only screen and (min-width: 82em) {
+    .cta__heading {
+      margin-right: 0;
+      max-width: 29rem;
+      font-size: 3.33rem;
+    }
+  }
+  
